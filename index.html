@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suprav Bhattarai — Mechatronics / Robotics</title>
+  <meta name="description" content="Artistic, fun personal site showcasing robotics + embedded projects, with a live path-planning demo."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="name">Suprav</span>
+      <span class="tag">mechatronics · robotics · embedded</span>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="pill">Contact</a>
+      <button id="themeBtn" class="iconBtn" aria-label="Toggle theme" title="Toggle theme">
+        <span class="icon" aria-hidden="true">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="heroLeft">
+        <p class="kicker">Hi — I build systems where <span class="accent">mechanics</span>, <span class="accent">electronics</span>, and <span class="accent">code</span> meet.</p>
+        <h1>
+          I’m <span class="grad">Suprav Bhattarai</span>.
+          <span class="sub">Mechatronics Engineering (Honours) · 2022–2026</span>
+        </h1>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="#projects">See projects</a>
+          <a class="btn" href="./assets/RESUME_PLACEHOLDER.pdf" download>Download resume</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+
+        <div class="statusCard" role="group" aria-label="Live status">
+          <div class="statusLine">
+            <span class="led" aria-hidden="true"></span>
+            <span><b>Currently:</b> building autonomous + IoT systems</span>
+          </div>
+          <div class="statusLine">
+            <span class="chip" aria-hidden="true">PY</span>
+            <span><b>Stack:</b> Python · OpenCV · Arduino/ESP32 · Raspberry Pi</span>
+          </div>
+          <div class="statusLine">
+            <span class="chip" aria-hidden="true">CAD</span>
+            <span><b>Tools:</b> SolidWorks · Fusion 360 · Simulink · RobotStudio</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="heroRight">
+        <div class="panel">
+          <div class="panelTop">
+            <div class="panelTitle">
+              <span class="miniLed" aria-hidden="true"></span>
+              <span>Path Planning Playground</span>
+            </div>
+            <div class="panelBtns">
+              <button class="miniBtn" id="regenBtn">Regenerate</button>
+              <button class="miniBtn" id="pauseBtn">Pause</button>
+            </div>
+          </div>
+
+          <canvas id="mowerCanvas" width="520" height="360" aria-label="Animated zig-zag path planning demo"></canvas>
+
+          <div class="panelBottom">
+            <div class="meter">
+              <div class="meterLabel">Coverage</div>
+              <div class="bar"><div class="barFill" id="covFill"></div></div>
+              <div class="meterValue" id="covValue">0%</div>
+            </div>
+
+            <div class="hint">
+              <span class="kbd">Click</span> to add obstacles · <span class="kbd">Shift+Click</span> to erase
+            </div>
+          </div>
+        </div>
+
+        <div class="microcopy">
+          Inspired by my autonomous lawn mower project: camera-based detection + zig-zag coverage.
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="sectionHead">
+        <h2>Projects that actually move</h2>
+        <p>Recruiters skim. So each card answers: <b>what</b>, <b>why it matters</b>, and <b>how I built it</b>.</p>
+      </div>
+
+      <div class="grid cards">
+        <article class="card">
+          <div class="cardTop">
+            <h3>Autonomous Lawn Mower (Major)</h3>
+            <span class="badge">Raspberry Pi · OpenCV · GPS</span>
+          </div>
+          <p>Camera-based grass detection + obstacle avoidance with a zig-zag coverage strategy.</p>
+          <ul>
+            <li>Raspberry Pi + camera + GPS + proximity sensors</li>
+            <li>Python + OpenCV for color detection & navigation logic</li>
+            <li>Battery-powered, low-speed precision movement</li>
+          </ul>
+          <div class="cardLinks">
+            <a href="#" class="link">Demo video (add)</a>
+            <a href="#" class="link">GitHub (add)</a>
+            <a href="#" class="link">Build log (add)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="cardTop">
+            <h3>IoT Water Level Controller</h3>
+            <span class="badge">ESP32 · OLED · Relay</span>
+          </div>
+          <p>Automatic pump control with a safety lockout to prevent rapid cycling.</p>
+          <ul>
+            <li>Calibrated sensing + auto shutoff</li>
+            <li>Lock mechanism until tank empties</li>
+            <li>Real-time display + Wi‑Fi-ready dashboard</li>
+          </ul>
+          <div class="cardLinks">
+            <a href="#" class="link">Schematic (add)</a>
+            <a href="#" class="link">Code (add)</a>
+            <a href="#" class="link">Photos (add)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="cardTop">
+            <h3>Mini Home Automation</h3>
+            <span class="badge">Arduino · Sensors · Bluetooth/Wi‑Fi</span>
+          </div>
+          <p>Event-based appliance control with interrupt-driven routines for real-time response.</p>
+          <ul>
+            <li>PIR + temperature + LDR sensing</li>
+            <li>Relays/LEDs/fans/buzzer actuation</li>
+            <li>HC‑05 / ESP8266 for wireless control</li>
+          </ul>
+          <div class="cardLinks">
+            <a href="#" class="link">Project report (add)</a>
+            <a href="#" class="link">Circuit (add)</a>
+            <a href="#" class="link">App UI (add)</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="cardTop">
+            <h3>Automated Screenshot Organizer</h3>
+            <span class="badge">Python · watchdog</span>
+          </div>
+          <p>Monitors a folder and sorts screenshots into structured categories automatically.</p>
+          <ul>
+            <li>Real-time filesystem events</li>
+            <li>Custom rules for organizing by app/project</li>
+            <li>Reduced manual overhead for workflows</li>
+          </ul>
+          <div class="cardLinks">
+            <a href="#" class="link">GitHub (add)</a>
+            <a href="#" class="link">Readme (add)</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="sectionHead">
+        <h2>Skills (the useful kind)</h2>
+        <p>A quick snapshot of the tools I reach for when building real systems.</p>
+      </div>
+
+      <div class="grid skillGrid">
+        <div class="skillBox">
+          <h3>Code</h3>
+          <p>Python · MATLAB · Arduino</p>
+        </div>
+        <div class="skillBox">
+          <h3>Microcontrollers</h3>
+          <p>Arduino · ESP32 · Raspberry Pi</p>
+        </div>
+        <div class="skillBox">
+          <h3>CAD</h3>
+          <p>SolidWorks · AutoCAD · Fusion 360</p>
+        </div>
+        <div class="skillBox">
+          <h3>Sim/Analysis</h3>
+          <p>Proteus · Simulink · ABB RobotStudio</p>
+        </div>
+        <div class="skillBox">
+          <h3>Industrial</h3>
+          <p>PLC · sensor integration · system integration</p>
+        </div>
+        <div class="skillBox">
+          <h3>Extras</h3>
+          <p>ROS (basic) · UI/UX · analytics</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timelineItem">
+          <div class="tDot" aria-hidden="true"></div>
+          <div class="tBody">
+            <div class="tTitle">Python Web Dev Intern · e‑Zone International (Feb–Apr 2024)</div>
+            <div class="tText">Built optimized landing pages, ran UI/UX improvements, and used analytics to propose changes.</div>
+          </div>
+        </div>
+        <div class="timelineItem">
+          <div class="tDot" aria-hidden="true"></div>
+          <div class="tBody">
+            <div class="tTitle">Teaching Instructor · Next Generation Residential Academy (Jul–Sep 2022)</div>
+            <div class="tText">Taught science/math/CS; mentored students with hands-on coding activities and STEM events.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="sectionHead">
+        <h2>About, but make it memorable</h2>
+        <p>This section is where you sound like a human—without fluff.</p>
+      </div>
+
+      <div class="aboutCard">
+        <p>
+          I’m an engineering student who likes building “systems with personality”: machines that sense, decide, and act.
+          I care about clean wiring, readable code, and designs that can survive the real world.
+        </p>
+        <p class="small">
+          Fun detail: the animation at the top is my “coverage path planning” idea turned into an interactive demo.
+          It’s a tiny way to show how I think: visual, experimental, and practical.
+        </p>
+
+        <div class="aboutChips" aria-label="Highlights">
+          <span class="chip2">Robotics & Automation</span>
+          <span class="chip2">Embedded Systems</span>
+          <span class="chip2">Control Systems</span>
+          <span class="chip2">System Integration</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="sectionHead">
+        <h2>Contact</h2>
+        <p>Keep it simple. One clear call-to-action.</p>
+      </div>
+
+      <div class="contactCard">
+        <div class="contactLeft">
+          <h3>Want to collaborate or interview?</h3>
+          <p>Send a message and include what you’re building / hiring for.</p>
+
+          <div class="contactBtns">
+            <a class="btn primary" href="mailto:you@example.com?subject=Hello%20Suprav!">Email me</a>
+            <a class="btn" href="https://github.com/your-handle" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+
+          <p class="small">Tip: use a professional email + real handles before you ship.</p>
+        </div>
+
+        <div class="contactRight" aria-label="Mini terminal">
+          <div class="terminal">
+            <div class="termTop">
+              <span class="tbtn red"></span><span class="tbtn yellow"></span><span class="tbtn green"></span>
+              <span class="termTitle">suprav@portfolio:~</span>
+            </div>
+            <pre class="termBody"><code id="termOut">$ whoami
+mechatronics student who ships projects
+
+$ ls projects/
+lawn_mower/  water_level_iot/  home_automation/  screenshot_organizer/
+
+$ echo "Let's build."
+Let's build.</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Suprav Bhattarai</span>
+      <span class="sep">·</span>
+      <a href="#main">Back to top</a>
+    </footer>
+  </main>
+
+  <div class="noise" aria-hidden="true"></div>
+  <script src="./script.js"></script>
+</body>
+</html>
