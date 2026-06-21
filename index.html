@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suprav Bhattarai | Mechatronics Engineer</title>
+    <meta
+      name="description"
+      content="Interactive engineering portfolio of Suprav Bhattarai: mechatronics, embedded systems, robotics, automation, control systems, PCB design, CAD, and product builds."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="grid-bg"></div>
+    <div class="scanline"></div>
+
+    <header class="topbar">
+      <a href="#hero" class="brand">SB<span>/deck</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#projects">Projects</a>
+        <a href="#breakdown">Build</a>
+        <a href="#publications">Papers</a>
+        <a href="#skills">Skills</a>
+        <a href="#playground">Playground</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero panel">
+        <div class="hero-copy">
+          <h1>
+            <span class="terminal-line">&gt; hello, I am</span>
+            <span class="name">Suprav Bhattarai</span>
+          </h1>
+          <p class="hero-text">
+            Mechatronics Engineering graduate with hands-on experience in embedded systems,
+            IoT, automation, PCB design, and field validation. I build practical systems
+            where mechanics, electronics, and code work together.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">See projects</a>
+            <a class="btn ghost" href="assets/Suprav_Bhattarai_Resume.pdf" target="_blank" rel="noreferrer">Download resume</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <aside class="hero-visual" aria-label="Animated engineering visual">
+          <div class="hero-3d">
+            <canvas id="labCanvas"></canvas>
+            <div class="holo-ring one"></div>
+            <div class="holo-ring two"></div>
+            <div class="status-chip">SYSTEM ONLINE</div>
+          </div>
+          <div class="boot-card">
+            <div class="window-dots"><span></span><span></span><span></span></div>
+            <pre id="bootText" aria-label="Boot terminal text"></pre>
+          </div>
+        </aside>
+      </section>
+
+      <section id="overview" class="overview panel reveal-section">
+        <div class="overview-copy">
+          <p class="eyebrow">profile status</p>
+          <h2>Engineering systems that sense, decide, and act.</h2>
+          <p>
+            I enjoy building real-world automation: embedded sensing, actuator control,
+            CAD/product design, circuit integration, data logging, and testing. My usual
+            workflow is simple: define the problem, prototype the hardware, write the
+            control logic, test the weak points, and keep iterating until the system behaves.
+          </p>
+          <div class="pill-row">
+            <span>Robotics</span>
+            <span>Embedded Systems</span>
+            <span>Control Logic</span>
+            <span>PCB + CAD</span>
+          </div>
+        </div>
+
+        <div class="status-grid">
+          <article class="status-card tilt-card">
+            <span>01</span>
+            <h3>Embedded systems</h3>
+            <p>ESP32, Arduino, Raspberry Pi, sensors, relays, MOSFET switching, firmware logic, and serial communication.</p>
+          </article>
+          <article class="status-card tilt-card">
+            <span>02</span>
+            <h3>Robotics + automation</h3>
+            <p>Camera-based detection, GPS/proximity sensing, path planning, actuator control, and field validation.</p>
+          </article>
+          <article class="status-card tilt-card">
+            <span>03</span>
+            <h3>Product build</h3>
+            <p>KiCad schematics, PCB layout, Fusion 360, 3D printing, enclosures, and practical debugging.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-wrap">
+        <div class="projects-sticky">
+          <div class="section-heading project-heading">
+            <p class="eyebrow">project rail</p>
+            <h2>Scroll sideways through the build deck</h2>
+            <p>Project title first, animated system visual next, and then the technical details reveal as you keep scrolling.</p>
+          </div>
+
+          <div class="project-track" aria-label="Project cards">
+            <article class="project-card featured tilt-card">
+              <p class="project-index">PROJECT 01</p>
+              <h3>Smart Irrigation Control System</h3>
+              <div class="project-visual pipe-system irrigation">
+                <span>PUMP</span>
+                <div class="pipe"><i></i></div>
+                <span>VALVE</span>
+                <div class="pipe"><i></i></div>
+                <span>FIELD</span>
+              </div>
+              <div class="project-detail">
+                <p>Gridomatix internship build focused on automated irrigation control.</p>
+                <ul>
+                  <li>Designed and tested ESP32-based embedded circuits for solenoid-valve irrigation control.</li>
+                  <li>Integrated flow sensors, relays, MOSFET switching, and power regulation modules.</li>
+                  <li>Developed Arduino/C++ control logic for actuator response, sensor reading, and hardware validation.</li>
+                  <li>Created KiCad schematics/PCB layouts and supported enclosure development for pilot-site testing.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card featured tilt-card">
+              <p class="project-index">PROJECT 02</p>
+              <h3>Water Monitoring System</h3>
+              <div class="project-visual water-monitor">
+                <div class="tank">
+                  <span class="water"></span>
+                  <b>FLOW</b>
+                </div>
+                <div class="monitor-readout">
+                  <p>&gt; flow_sensor: active</p>
+                  <p>&gt; data_log: writing</p>
+                  <p>&gt; summary: generated</p>
+                </div>
+              </div>
+              <div class="project-detail">
+                <p>Monitoring layer for irrigation/water-use data and validation workflows.</p>
+                <ul>
+                  <li>Built ESP32-based water monitoring with flow-sensor feedback and device status logging.</li>
+                  <li>Developed Python–MySQL backend logging workflows for device data and sensor logs.</li>
+                  <li>Prepared irrigation summaries to support testing, debugging, and pilot validation.</li>
+                  <li>Worked on enclosure design and field-readiness checks for a practical deployment setup.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card tilt-card">
+              <p class="project-index">PROJECT 03</p>
+              <h3>Autonomous Lawn Mower</h3>
+              <div class="project-visual mini-diagram mower-diagram">
+                <span class="node camera">CAM</span>
+                <span class="node pi">PI</span>
+                <span class="node esp">ESP32</span>
+                <span class="node motor">MOTOR</span>
+                <svg viewBox="0 0 420 160" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="wire" d="M60 60 C130 20, 160 20, 210 70 S300 120, 360 70" />
+                  <path class="route" d="M45 130 C110 90, 160 145, 225 100 S315 80, 375 125" />
+                </svg>
+              </div>
+              <div class="project-detail">
+                <p>Major project using sensing, embedded control, and coverage planning.</p>
+                <ul>
+                  <li>Designed a robotic lawn mower using Raspberry Pi, camera-based grass detection, GPS, and proximity sensors.</li>
+                  <li>Used Python/OpenCV for vision-based detection and navigation logic.</li>
+                  <li>Implemented zig-zag path planning for structured lawn coverage.</li>
+                  <li>Integrated embedded motor control and practical obstacle-avoidance behavior.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card tilt-card">
+              <p class="project-index">PROJECT 04</p>
+              <h3>IoT Water Level Controller</h3>
+              <div class="project-visual level-controller">
+                <div class="level-bars"><span></span><span></span><span></span><span></span></div>
+                <div class="controller-chip">ESP32<br /><small>OLED · RELAY · WIFI</small></div>
+              </div>
+              <div class="project-detail">
+                <p>Automatic water-level monitoring and pump-control system.</p>
+                <ul>
+                  <li>Developed an ESP32-based tank monitoring and pump-control prototype.</li>
+                  <li>Used sensors, relay switching, OLED display, and Wi-Fi monitoring logic.</li>
+                  <li>Added automatic pump safety logic to reduce repeated rapid cycling.</li>
+                  <li>Focused on simple user feedback and reliable actuator response.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card tilt-card">
+              <p class="project-index">PROJECT 05</p>
+              <h3>Miniature Home Automation System</h3>
+              <div class="project-visual automation-grid">
+                <span>PIR</span><span>LDR</span><span>TEMP</span><span>RELAY</span><span>FAN</span><span>BUZZER</span>
+              </div>
+              <div class="project-detail">
+                <p>Arduino-based appliance-control and sensor-response prototype.</p>
+                <ul>
+                  <li>Built a home automation prototype using PIR, temperature, and LDR sensors.</li>
+                  <li>Controlled relays, LEDs, fans, and buzzer outputs through event-based logic.</li>
+                  <li>Experimented with HC-05/ESP8266 style wireless control concepts.</li>
+                  <li>Used the project as a base for IoT/home automation research writing.</li>
+                </ul>
+              </div>
+            </article>
+
+
+            <article class="project-card screenshot-card tilt-card">
+              <p class="project-index">PROJECT 06</p>
+              <h3>Screenshot Organizer</h3>
+              <div class="project-visual screenshot-organizer">
+                <div class="screen-window">
+                  <span></span><span></span><span></span>
+                  <b>screenshots/</b>
+                </div>
+                <div class="file-stack">
+                  <i>IMG_01.png</i>
+                  <i>class_notes.png</i>
+                </div>
+                <div class="folder-stack">
+                  <em>College</em>
+                  <em>Projects</em>
+                </div>
+              </div>
+              <div class="project-detail">
+                <p>Small automation project for cleaning and sorting screenshot clutter.</p>
+                <ul>
+                  <li>Built a Python-based organizer to move screenshots into cleaner category folders.</li>
+                  <li>Used file handling, naming rules, and folder creation to reduce manual sorting work.</li>
+                  <li>Focused on a practical daily-use problem instead of a purely demo-style project.</li>
+                  <li>Designed it as a simple productivity tool that can be extended with date-based or keyword-based rules.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card end-card tilt-card">
+              <p class="project-index">NEXT</p>
+              <h3>Open to engineering roles</h3>
+              <div class="project-visual log-box">
+                <p>&gt; target_roles/</p>
+                <p>&gt; embedded_systems</p>
+                <p>&gt; robotics_automation</p>
+                <p>&gt; mechatronics_product_builds</p>
+              </div>
+              <div class="project-detail">
+                <p>I am looking for roles where I can build, test, debug, and ship real engineering systems.</p>
+                <a class="btn primary" href="#contact">Open contact console</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="breakdown" class="build-morph-section">
+        <div class="morph-sticky panel">
+          <div class="morph-copy">
+            <p class="eyebrow">exploded system view</p>
+            <h2>How my builds come together</h2>
+            <p>
+              Scroll through the build stages. The center object changes like a small
+              engineering module while the active layer reveals what I usually work on.
+            </p>
+            <div class="morph-steps" aria-label="Build stages">
+              <article class="morph-step is-active" data-stage="0">
+                <span>01 · Sense</span>
+                <h3>Collect real-world signals</h3>
+                <p>Flow sensors, level sensors, cameras, GPS, ultrasonic sensors, PIR, temperature, LDR, and field observations.</p>
+              </article>
+              <article class="morph-step" data-stage="1">
+                <span>02 · Control</span>
+                <h3>Turn signals into decisions</h3>
+                <p>Arduino/C++, Python, OpenCV, sensor thresholds, actuator logic, safety states, and data handling.</p>
+              </article>
+              <article class="morph-step" data-stage="2">
+                <span>03 · Actuate</span>
+                <h3>Make the system move</h3>
+                <p>Solenoid valves, relays, MOSFETs, pumps, motors, motor drivers, LEDs, buzzers, and indicators.</p>
+              </article>
+              <article class="morph-step" data-stage="3">
+                <span>04 · Package</span>
+                <h3>Build it into hardware</h3>
+                <p>KiCad schematics, PCB layout, Fusion 360, SolidWorks, 3D printing, enclosure design, and wiring cleanup.</p>
+              </article>
+              <article class="morph-step" data-stage="4">
+                <span>05 · Validate</span>
+                <h3>Test until it behaves</h3>
+                <p>Bench checks, field validation, failure cases, logs, iteration notes, and final documentation.</p>
+              </article>
+              <article class="morph-step" data-stage="5">
+                <span>06 · Ship</span>
+                <h3>Turn prototype into proof</h3>
+                <p>Reports, demos, project pages, recruiter-ready summaries, and next-iteration planning.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="morph-stage" aria-label="Scroll controlled 3D build shape">
+            <canvas id="morphCanvas"></canvas>
+            <div class="morph-hud">
+              <span id="morphLabel">SENSE MODULE</span>
+              <small>scroll-linked build core</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications" class="publications panel reveal-section">
+        <div class="section-heading">
+          <p class="eyebrow">publications + proof</p>
+          <h2>Technical writing and research output</h2>
+        </div>
+
+        <div class="paper-list">
+          <article class="paper-card tilt-card">
+            <span>ISC-SAI · 2026</span>
+            <h3>Vision-Guided Robotic Lawn Mower for Autonomous Lawn Maintenance</h3>
+            <p>Conference presentation completed. Manuscript currently under publication process.</p>
+            <div class="paper-actions">
+              <a class="btn ghost disabled" aria-disabled="true">Paper pending</a>
+            </div>
+          </article>
+          <article class="paper-card tilt-card">
+            <span>IJERT · Apr 2025</span>
+            <h3>IoT Driven Home Automation System: A Comprehensive Review</h3>
+            <p>Published in IJERT · DOI: 10.17577/IJERTCONV13IS03017.</p>
+            <div class="paper-actions">
+              <a class="btn primary" href="https://www.ijert.org/iot-driven-home-automation-system-a-comprehensive-review" target="_blank" rel="noreferrer">Read paper</a>
+              <a class="btn ghost" href="https://www.ijert.org/research/iot-driven-home-automation-system-a-comprehensive-review-IJERTCONV13IS03017.pdf" target="_blank" rel="noreferrer">Download PDF</a>
+            </div>
+          </article>
+          <article class="paper-card tilt-card patent-card">
+            <span>Design Patent · Applied</span>
+            <h3>Design Patent Application</h3>
+            <p>Application No: 484839-001 · CBR: 228436.</p>
+            <div class="paper-actions">
+              <a class="btn primary" href="https://search.ipindia.gov.in/DesignApplicationStatus" target="_blank" rel="noreferrer">Verify my patent 🕵️</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="experience panel reveal-section">
+        <div class="section-heading">
+          <p class="eyebrow">engineering logs</p>
+          <h2>Experience timeline</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="log-entry tilt-card">
+            <span>Jan 2026 — Present</span>
+            <h3>Embedded & Control Systems Intern · Gridomatix · Bangalore</h3>
+            <p>Designed and tested ESP32-based circuits for irrigation automation, developed Arduino/C++ control logic, created KiCad schematics/PCB layouts, and supported Python–MySQL logging workflows for device data and irrigation summaries.</p>
+            <button class="btn ghost reference-toggle" type="button">What, you don’t believe me? ⚡</button>
+            <div class="reference-popover" aria-hidden="true">
+              <strong>D. Roshan Pai</strong>
+              <span>Gridomatix · Managing Partner</span>
+              <a href="tel:+919591846088">+91 9591846088</a>
+              <a href="mailto:roshan@gridomatix.com">roshan@gridomatix.com</a>
+            </div>
+          </article>
+          <article class="log-entry tilt-card">
+            <span>Feb 2024 — Apr 2024</span>
+            <h3>Python Web Development Intern · e-Zone International · Kathmandu</h3>
+            <p>Developed responsive landing pages for digital marketing campaigns and collaborated with UI/UX and marketing teams to improve user engagement and campaign performance.</p>
+            <button class="btn ghost reference-toggle" type="button">Still suspicious? Ask the witness 🕵️</button>
+            <div class="reference-popover" aria-hidden="true">
+              <strong>Garima Adhikari</strong>
+              <span>e-Zone International Pvt. Ltd. · Head of Marketing</span>
+              <a href="tel:+9779808137764">+977 9808137764</a>
+              <a href="mailto:garima.ezone@gmail.com">garima.ezone@gmail.com</a>
+            </div>
+          </article>
+          <article class="log-entry tilt-card">
+            <span>Jul 2022 — Sep 2022</span>
+            <h3>Teaching Instructor · Next Generation Residential Academy · Kathmandu</h3>
+            <p>Taught science, mathematics, and computer science to middle and high school students through interactive learning methods.</p>
+            <button class="btn ghost reference-toggle" type="button">Need backup proof? Open reference 📡</button>
+            <div class="reference-popover" aria-hidden="true">
+              <strong>Nirmala Aryal</strong>
+              <span>Next Generation Residential Academy · Principal</span>
+              <a href="tel:+9779841512375">+977 9841512375</a>
+              <a href="mailto:nexgen9771@gmail.com">nexgen9771@gmail.com</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="skills panel reveal-section">
+        <div class="section-heading">
+          <p class="eyebrow">skill arcade</p>
+          <h2>Skills, but make it feel like a control room</h2>
+        </div>
+
+        <div class="skill-lab">
+          <div class="skill-orbit tilt-card" aria-label="Animated skill orbit">
+            <div class="orbit-ring ring-a"></div>
+            <div class="orbit-ring ring-b"></div>
+            <div class="core-puck">MECHATRONICS<br /><span>CORE</span></div>
+            <span class="orbit-chip chip-a">ESP32</span>
+            <span class="orbit-chip chip-b">Python</span>
+            <span class="orbit-chip chip-c">KiCad</span>
+            <span class="orbit-chip chip-d">Fusion 360</span>
+            <span class="orbit-chip chip-e">Sensors</span>
+            <span class="orbit-chip chip-f">Control</span>
+          </div>
+
+          <div class="skill-modules">
+            <article class="skill-module tilt-card">
+              <div class="module-head"><span class="led online"></span><h3>Programming</h3></div>
+              <p>Python · MATLAB · Arduino/C++ · JavaScript basics</p>
+              <div class="powerbar"><i></i><i></i><i></i><i></i><i></i></div>
+            </article>
+            <article class="skill-module tilt-card">
+              <div class="module-head"><span class="led online"></span><h3>Embedded + IoT</h3></div>
+              <p>ESP32 · Arduino · Raspberry Pi · LoRaWAN · TTN · Wi‑Fi</p>
+              <div class="powerbar"><i></i><i></i><i></i><i></i><i></i></div>
+            </article>
+            <article class="skill-module tilt-card">
+              <div class="module-head"><span class="led online"></span><h3>Circuit + PCB</h3></div>
+              <p>KiCad · power regulation · relays · MOSFET circuits · valve control</p>
+              <div class="powerbar"><i></i><i></i><i></i><i></i></div>
+            </article>
+            <article class="skill-module tilt-card">
+              <div class="module-head"><span class="led warm"></span><h3>Mechanical Design</h3></div>
+              <p>Fusion 360 · 3D printing · enclosure design · prototype testing</p>
+              <div class="powerbar"><i></i><i></i><i></i><i></i><i></i></div>
+            </article>
+            <article class="skill-module tilt-card">
+              <div class="module-head"><span class="led warm"></span><h3>Simulation + Tools</h3></div>
+              <p>Proteus · Simulink · ABB RobotStudio · MS Office · ROS basics</p>
+              <div class="powerbar"><i></i><i></i><i></i><i></i></div>
+            </article>
+            <article class="skill-module tilt-card">
+              <div class="module-head"><span class="led online"></span><h3>System Work</h3></div>
+              <p>Sensor interfacing · testing · documentation · field validation</p>
+              <div class="powerbar"><i></i><i></i><i></i><i></i><i></i></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="playground" class="path-lab panel reveal-section">
+        <div class="section-heading">
+          <p class="eyebrow">navigation lab</p>
+          <h2>Path-planning playground</h2>
+          <p>A redesigned mini route lab inspired by my autonomous mower work. Click cells to add obstacles, then run a coverage path.</p>
+        </div>
+
+        <div class="planner-card tilt-card">
+          <div class="planner-screen">
+            <canvas id="pathCanvas" width="720" height="420" aria-label="Interactive path planning grid"></canvas>
+            <div class="planner-glow"></div>
+          </div>
+          <div class="planner-panel">
+            <h3>Coverage route console</h3>
+            <p>Click to add obstacles · Shift + click to erase · Run route to draw the sweep path.</p>
+            <div class="planner-actions">
+              <button class="btn primary" id="runPlanner">Run coverage</button>
+              <button class="btn ghost" id="seedObstacles">Generate field</button>
+              <button class="btn ghost" id="clearPlanner">Clear lab</button>
+            </div>
+            <div class="planner-stats">
+              <span>Coverage <b id="coverageStat">0%</b></span>
+              <span>Obstacles <b id="obstacleStat">0</b></span>
+              <span>Route cells <b id="routeStat">0</b></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact panel reveal-section">
+        <div class="contact-console tilt-card">
+          <p class="eyebrow">contact console</p>
+          <h2>&gt; ready_to_connect = true</h2>
+          <p>
+            Want to collaborate or interview? Send a message and include what
+            you are building or hiring for.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="mailto:supubhattarai@gmail.com">Email me</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/suprav-bhattarai/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn ghost" href="https://github.com/Suprav123" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn ghost" href="assets/Suprav_Bhattarai_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          </div>
+          <pre class="terminal-footer">suprav@portfolio:~
+$ whoami
+mechatronics engineer who ships projects
+
+$ ls projects/
+smart_irrigation/ water_monitoring/ lawn_mower/ water_level_iot/ home_automation/
+
+$ echo "Let's build."
+Let's build.</pre>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
